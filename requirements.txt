@@ -7,4 +7,4 @@ joblib
 streamlit
 fuzzywuzzy
 beautifulsoup4
-sklearn
+scikit-learn
