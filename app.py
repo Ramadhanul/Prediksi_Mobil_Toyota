@@ -327,7 +327,7 @@ elif st.session_state.tab == 'Tentang':
 
 elif st.session_state.tab == 'Chatbot':
     # ====== Konfigurasi ======
-    OPENROUTER_API_KEY = "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"  # Ganti dengan punyamu
+    OPENROUTER_API_KEY = st.secrets["OPENROUTER_API_KEY"]  # Ganti dengan punyamu
     MODEL_NAME = "microsoft/mai-ds-r1:free"
 
     # ====== Load data ======
