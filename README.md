@@ -1,66 +1,69 @@
 # 🚗 Prediksi Harga Mobil Toyota dengan AI
 
-Aplikasi web interaktif yang memprediksi harga mobil Toyota berdasarkan input pengguna. Menggunakan model machine learning dan integrasi dengan API dari [OpenRouter.ai](https://openrouter.ai) untuk memberikan estimasi harga yang akurat.
+Aplikasi web berbasis **Streamlit** yang memprediksi harga mobil Toyota berdasarkan input pengguna. Model ini dibangun menggunakan machine learning dan mengintegrasikan kemampuan LLM dari **OpenRouter.ai** untuk membantu memberikan analisis atau feedback tambahan terkait prediksi dengan menggunakan chatbot.
 
 ## 🔗 Demo Aplikasi
-Akses aplikasi secara langsung di:
-👉 [https://your-app-name.streamlit.app](https://your-app-name.streamlit.app)
+Akses aplikasi online di:  
+> [https://prediksimobiltoyota.streamlit.app/](https://prediksimobiltoyota.streamlit.app/) 
 
-## 🧰 Fitur
-- Input informasi mobil: tahun, tipe, transmisi, dll.
-- Prediksi harga mobil menggunakan model machine learning.
-- Integrasi dengan OpenRouter API untuk pemrosesan lanjutan.
-- Antarmuka pengguna interaktif dengan Streamlit.
+## 🧰 Deskripsi Proyek
+Aplikasi ini membantu pengguna memperkirakan harga mobil Toyota bekas berdasarkan beberapa fitur kendaraan seperti:
+- Model mobil
+- Tahun pembuatan
+- Perkiraan Harga Baru Kendaraan
 
-## 🛠 Teknologi yang Digunakan
+Scraping diambil dari website [https://www.mobil123.com/](https://www.mobil123.com/) 
+Prediksi harga dilakukan oleh model machine learning yang telah dilatih sebelumnya dan disimpan dalam format `.pkl`.  
+Selain itu, aplikasi dapat terkoneksi dengan **OpenRouter.ai API** untuk membuat chatbot dan terkoneksi juga dengan model prediksi.
+
+## 🛠 Fitur Utama
+- Input data mobil secara interaktif
+- Prediksi harga mobil berdasarkan model yang telah di training
+- Chatbot dengan menggunakan API OpenRouter dan terhubung ke model prediksi
+- Grafik dan data depresiasi yang bisa di filter sesuai tahun
+
+## 🧪 Teknologi yang Digunakan
 - Python
 - Streamlit
 - Scikit-learn
-- TensorFlow/Keras
+- TensorFlow / Keras
 - OpenRouter API
-- Pandas
-- NumPy
+- Pandas, NumPy, Matplotlib
 
-## 📁 Struktur Proyek
+## 📁 Struktur Folder
 Prediksi_Mobil_Toyota/
-├── app.py
-├── data_mobil.csv
-├── model_prediksi_harga.pkl
-├── requirements.txt
-├── .streamlit/
-│ └── secrets.toml
-└── README.md
+- Pengelohan Data dan Training Model
+-- Project_Assignment_LEGOAS.ipynb
+- Scraping
+-- mobil123_bekas.py dan mobil123_baru.py serta hasil scraping
+- app.py # Aplikasi utama
+- data_mobil.csv # Dataset referensi
+- model_prediksi_harga.pkl # Model ML tersimpan
+- scaler_X.pkl, scaler_y.pkl # Scaler input dan output
+- feature_columns.pkl # Fitur yang digunakan saat pelatihan
+- requirements.txt # Daftar dependensi
+- .streamlit/
+-- secrets.toml # File rahasia untuk API key
+- README.md # Dokumentasi proyek
 
-bash
-Salin
-Edit
+## 🚀 Cara Menjalankan Aplikasi Secara Lokal
 
-## 🚀 Panduan Instalasi dan Menjalankan Aplikasi
+### 1. Clone Repositori
+```bash
+git clone https://github.com/Ramadhanul/Prediksi_Mobil_Toyota.git
+cd Prediksi_Mobil_Toyota
 
-1. **Clone repositori:**
-   ```bash
-   git clone https://github.com/Ramadhanul/Prediksi_Mobil_Toyota.git
-   cd Prediksi_Mobil_Toyota
-Buat environment dan install dependensi:
+2. Buat Virtual Environment & Install Requirements
 
-bash
-Salin
-Edit
 python -m venv env
-source env/bin/activate  # Untuk Linux/Mac
-env\Scripts\activate     # Untuk Windows
+source env/bin/activate        # Linux/macOS
+env\Scripts\activate           # Windows
 pip install -r requirements.txt
-Tambahkan API key di .streamlit/secrets.toml:
 
-toml
-Salin
+3. Tambahkan API Key secara Aman
+Buat key sendiri di [https://openrouter.ai/](https://openrouter.ai/) 
 Edit
-OPENROUTER_API_KEY = "sk-or-v1-xxxxxxxxxxxxxxxx"
-Jalankan aplikasi:
+OPENROUTER_API_KEY = "Key Sendiri"
 
-bash
-Salin
-Edit
+4. Jalankan Aplikasinya
 streamlit run app.py
-🔐 Keamanan API Key
-Jangan pernah menuliskan API key langsung dalam kode. Gunakan environment variable atau st.secrets untuk menyimpannya secara aman, terutama saat menggunakan platform seperti Streamlit Cloud.
