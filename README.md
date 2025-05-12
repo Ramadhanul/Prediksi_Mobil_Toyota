@@ -61,7 +61,7 @@ env\Scripts\activate           # Windows
 pip install -r requirements.txt
 
 3. Tambahkan API Key secara Aman
-Buat key sendiri di [https://openrouter.ai/](https://openrouter.ai/) 
+Buat key sendiri di https://openrouter.ai
 Edit
 OPENROUTER_API_KEY = "Key Sendiri"
 
