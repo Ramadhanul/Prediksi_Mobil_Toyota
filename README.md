@@ -10,7 +10,7 @@ Akses aplikasi online di:
 Aplikasi ini membantu pengguna memperkirakan harga mobil Toyota bekas berdasarkan beberapa fitur kendaraan seperti:
 - Model mobil
 - Tahun pembuatan
-- Perkiraan Harga Baru Kendaraan
+- Perkiraan Harga Bekas Kendaraan
 
 Scraping diambil dari website [https://www.mobil123.com/](https://www.mobil123.com/) 
 Prediksi harga dilakukan oleh model machine learning yang telah dilatih sebelumnya dan disimpan dalam format `.pkl`.  
