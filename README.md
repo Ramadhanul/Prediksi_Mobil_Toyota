@@ -33,7 +33,7 @@ Selain itu, aplikasi dapat terkoneksi dengan **OpenRouter.ai API** untuk membuat
 ## 📁 Struktur Folder
 Prediksi_Mobil_Toyota/
 - Pengelohan Data
--- Project_Assignment_LEGOAS.ipynb -- Termasuk Training Model
+-- Project_Assignment.ipynb -- Termasuk Training Model
 - Scraping
 -- mobil123_bekas.py dan mobil123_baru.py serta hasil scraping
 - app.py # Aplikasi utama
